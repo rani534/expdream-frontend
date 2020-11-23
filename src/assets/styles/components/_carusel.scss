@@ -1,0 +1,96 @@
+.img-carousel {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #000000b8;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    .btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        padding-top: 4.8px;
+        font-size: 17px;
+        background-color: #ffffffb8;
+        transition: 0.2s;
+        &:hover {
+            background-color: #ffffffe0;
+        }
+    }
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 600px;
+        z-index: 11;
+        background-color: black;
+        .btn {
+            position: relative;
+            background-color: unset;
+            border: 1px solid transparent;
+            color: #fff;
+            position: absolute;
+            margin-top: -25px;
+            z-index: 2;
+            font-size: 30px;
+            width: 45px;
+            height: 45px;
+        }
+        .btn:hover {
+            cursor: pointer;
+        }
+        .btn:focus {
+            outline: none;
+        }
+        .btn-next {
+            top: 50%;
+            right: 0;
+        }
+        .btn-prev {
+            top: 50%;
+            left: 0;
+        }
+        .carousel-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            img {
+                position: absolute;
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+    @include for-wide-XL-layout {
+        .carousel {
+            height: 500px;
+        }
+    }
+    @include for-wide-layout {
+        .carousel {
+            height: 500px;
+        }
+    }
+    @include for-normal-layout {
+        .carousel {
+            max-height: 350px;
+        }
+    }
+    @include for-narrow-layout {
+        .carousel {
+            max-height: 250px;
+        }
+    }
+}

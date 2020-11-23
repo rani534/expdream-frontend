@@ -1,0 +1,23 @@
+.footer-app {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .footer-container {
+        border-top: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 15px;
+        
+        @include for-wide-XL-layout{
+          
+        }
+        @include for-wide-layout{
+            padding: 19px 15px;
+        }
+        @include for-narrow-layout {
+            font-size: 12px;
+        }
+    }
+}
+

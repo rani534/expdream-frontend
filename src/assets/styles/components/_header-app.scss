@@ -1,0 +1,214 @@
+.app-header {
+    font-size: 14px;
+    top: 0;
+    position: absolute;
+    height: 55px;
+    background-color: #ffffff40;
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 2px -1.2px rgba(0, 0, 0, 0.2);
+    .hamburger {
+        display: none;
+    }
+    img {
+        width: 115px;
+        position: relative;
+        top: 5px;
+    }
+    .logo {
+        max-width: 240px;
+    }
+    .router-header > * {
+        margin-inline-start: 20px;
+    }
+    .router-header {
+        display: flex;
+        align-items: center;
+        .bell-btn {
+            height: 100%;
+            font-size: 22px;
+            position: relative;
+            top: 7.5px;
+            .msg {
+                visibility: hidden;
+                width: 13px;
+                height: 15px;
+                position: relative;
+                background-color: red;
+                left: 10px;
+                bottom: 27px;
+                border-radius: 3px;
+                color: white;
+                font-size: 13px;
+                font-weight: bold;
+                &.visible {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    .bell-btn.mobile {
+        display: none;
+    }
+    .login-router {
+        color: #73787d;
+        &:hover {
+            color: #333;
+        }
+    }
+    button {
+        color: #73787d;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover {
+            color: #333;
+        }
+    }
+    .active {
+        color: #333;
+    }
+
+    .notifications-list {
+        z-index: 9999;
+        position: absolute;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 8px;
+        li {
+            padding: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            width: 260px;
+            &:not(:first-of-type){
+                border-top: 1px solid lightgray;
+            }
+            .image {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+            }
+            .notification-time-desc {
+                margin-top: 6px;
+                text-align: center;
+                .notification-desc {
+                    line-height: 20px;
+                    font-weight: bold;
+                
+                }
+                .notification-time {
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+    @include for-narrow-layout {
+        .screen {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.308);
+            z-index: 11;
+        }
+        .router-header {
+            display: flex;
+            flex-direction: column;
+            top: 0;
+            right: 0;
+            z-index: 12;
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+            transform: translateY(-100%);
+            transition: 0.8s;
+            background-color: lightgray;
+            padding: 6px 0;
+            &.openMenu {
+                transform: translateY(0);
+            }
+            & > * {
+                background-color: #021e43;
+                width: 100%;
+                height: 85px;
+                margin: 3px 0;
+                font-size: 26px;
+                text-align: center;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: #062f64;
+                    color: white;
+                    cursor: pointer;
+                    span {
+                        color: white;
+                    }
+                    .logout-btn {
+                        color: white;
+                    }
+                }
+            }
+            .log-user {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .logout-btn {
+                    font-size: 26px;
+                }
+            }
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button {
+                margin-bottom: 5px;
+            }
+        }
+        .hamburger {
+            display: block;
+            font-size: 30px;
+            
+        }
+        .router-header {
+            position: fixed;
+        }
+        .mobile-container {
+            display: flex;
+        }
+        .bell-btn {
+            display: none;
+        }
+        .bell-btn.mobile {
+            margin-inline-end: 10px;
+            display: block;
+            height: 100%;
+            font-size: 22px;
+            position: relative;
+            top: 7.5px;
+            .msg {
+                visibility: hidden;
+                width: 13px;
+                height: 15px;
+                position: relative;
+                background-color: red;
+                left: 10px;
+                bottom: 27px;
+                border-radius: 3px;
+                color: white;
+                font-size: 13px;
+                font-weight: bold;
+                &.visible {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.exp-edit {
+    .form-edit-add {
+        margin: 0 auto;
+        display: grid;
+    }
+    display: flex;
+    flex-direction: column;
+    max-width: 790px;
+    margin: 0 auto;
+    padding: 0 10px;
+    margin-top: 65px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    h1 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    label {
+        font-weight: bold;
+    }
+    .selector-type {
+        margin: 15px 0;
+    }
+    .input-img {
+        margin: 15px 0;
+    }
+    .exp-edit-imgs-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .exp-edit-imgs {
+        margin: 5px;
+    }
+    .el-input-textarea {
+        margin: 7.5px 0;
+    }
+    .el-input-capacity {
+        margin: 7.5px 0;
+        max-width: 100px;
+    }
+    .multi-selector {
+        margin: 7.5px 0;
+        width: 400px;
+    }
+    .input-price {
+        margin: 7.5px 0;
+        width: 120px;
+    }
+
+    .btn-container {
+        max-width: 900px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        button {
+            font-size: 15px;
+            width: 120px;
+            height: 45px;
+            border-radius: 13px;
+            padding: 8px 22px;
+            margin-bottom: 5px;
+            border: none;
+            color: white;
+            transition: 0.15s;
+
+            &.btn-save {
+                background-color: #1e72e0;
+                justify-self: flex-end;
+                &:hover {
+                    background-color: #115aba;
+                }
+            }
+            &.btn-back {
+                background-color: #b6b7b9;
+                &:hover {
+                    background-color: #99999b;
+                }
+            }
+            &.delete-exp {
+                background-color: red;
+                &:hover {
+                    background-color: #ca0404;
+                }
+            }
+        }
+    }
+    @include for-narrow-layout {
+        h1 {
+            font-size: 40px;
+        }
+        .multi-selector {
+            width: 340px;
+        }
+    }
+}

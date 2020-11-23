@@ -1,0 +1,198 @@
+.user-details {
+  min-height: 75vh;
+  max-width: 980px;
+  margin: 0 auto;
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  .user-details-container {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1.1px solid #504658;
+    .user-details-img {
+      margin-inline-end: 20px;
+      height: 180px;
+      width: unset;
+    }
+    .user-details-name-info {
+      width: 50%;
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        margin-bottom: 10px;
+      }
+      p {
+        line-height: 1.4;
+      }
+    }
+    .add-exp-btn-container {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      .add-exp-btn {
+        font-size: 15px;
+        border-radius: 8px;
+        padding: 8px 22px;
+        margin: 0;
+        border: none;
+        background-color: #1e72e0;
+        color: white;
+        transition: 0.15s;
+        &:hover {
+          background-color: #115aba;
+        }
+      }
+    }
+  }
+  .charts-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .user-activity-table {
+    border-collapse: collapse;
+    width: fit-content;
+    margin-bottom: 20px;
+    thead {
+      th {
+        padding: 14px 19.8px;
+        background-color: #c1dcff47;
+        text-align-last: center;
+      }
+      th:not(:last-of-type) {
+        border-right: 1px solid #b9b9b9;
+      }
+    }
+    tbody {
+      width: 100%;
+      tr:nth-child(even) {
+        background-color: #c1dcff47;
+      }
+      tr {
+        td {
+          padding: 5px 10px;
+          font-size: 13.5px;
+          &:not(:first-of-type):not(:last-of-type) {
+            border-right: 1px solid #b9b9b9;
+          }
+          .participant-img {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+          }
+          &.img-cell {
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+          }
+          &.center {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .chart {
+    display: block;
+    width: 380px;
+    height: 350px;
+    margin: 20px;
+  }
+  .back-btn {
+    align-self: flex-start;
+    font-size: 24px;
+    border-radius: 13px;
+    margin-bottom: 5px;
+    border: none;
+    background-color: unset;
+    color: #504658;
+    transition: 0.15s;
+    position: relative;
+    margin-bottom: 15px;
+    &:hover {
+      color: #37323b;
+    }
+  }
+  @include for-wide-layout {
+    max-width: 700px;
+    padding: 0 7px;
+    .user-details-container {
+      .user-details-img {
+        height: 140px;
+      }
+      .user-details-name-info {
+        width: 47%;
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    .user-activity-table {
+      thead {
+        th {
+          padding: 11px 10.5px;
+          font-size: 12px;
+        }
+      }
+      tbody {
+        width: 100%;
+        tr:nth-child(even) {
+          background-color: #c1dcff47;
+        }
+        tr {
+          td {
+            padding: 1px 5px;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+  @include for-normal-layout {
+    max-width: 540px;
+    padding: 0 15px;
+    .charts-container {
+      margin-inline-start: 10px;
+      flex-direction: column;
+    }
+    .doughnut-chart {
+      margin-bottom: 40px;
+    }
+    .bar-chart{
+      margin-bottom: 20px;
+    }
+  }
+  @include for-narrow-layout {
+      .user-details-container{ 
+      flex-direction: column;
+      align-items: center;
+      .user-details-name-info{
+        width: 80%;
+        margin-bottom: 10px;
+      }
+      .add-exp-btn-container {
+        margin-top: 10px;
+        align-self: center;
+      }
+        .user-details-img {
+          width: 50%;
+          height: unset;
+        }
+      }
+    .activities-list-container {
+      display: none;
+    }
+    .doughnut-chart{
+      max-width: 335px;
+      max-height: 335px;
+    }
+   
+  }
+}
